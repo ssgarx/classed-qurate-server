@@ -6,7 +6,7 @@ const resolvers = require("./graphql/resolvers");
 require("dotenv").config();
 // const { MONGODB } = require("./config.js");
 
-const PORT = process.env.port || 5000;
+const PORT = process.env.PORT || 5000;
 
 const server = new ApolloServer({
   typeDefs,
@@ -15,10 +15,13 @@ const server = new ApolloServer({
 });
 
 mongoose
-  .connect(process.env.MONGODB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://classed:0VeuwWeLIujMjqUQ@cluster0.im90v.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("MongoDB Connected");
     return server.listen({ port: PORT });

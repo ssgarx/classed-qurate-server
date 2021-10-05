@@ -29,7 +29,7 @@ function generateToken(email, id) {
       email,
       id,
     },
-    process.env.SECRET_KEY,
+    "some very secret key",
     { expiresIn: "8760h" }
   );
 }
