@@ -10,6 +10,7 @@ async function generateLinkPreview(postedLink) {
 }
 
 const { sendOtpMail } = require("../../util/mailer");
+
 const {
   validateRegisterInput,
   validateGroupCreation,
