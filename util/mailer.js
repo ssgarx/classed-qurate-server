@@ -17,7 +17,7 @@ module.exports.sendOtpMail = async (otp, email) => {
     service: "gmail",
     auth: {
       user: "qurate6@gmail.com",
-      pass: "fushiarebel@1627",
+      pass: "ufbxpnrhbzueyigq",
     },
   });
 
