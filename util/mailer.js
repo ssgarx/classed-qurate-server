@@ -34,7 +34,7 @@ module.exports.sendOtpMail = async (otp, email) => {
 
     from: "qurate6@gmail.com", // sender address
     to: email, // list of receivers
-    subject: "Some subject", // subject line
+    subject: "OTP for Qurate Login/Signup", // subject line
     text: "Hello world?", // plain text body
     html: `
     <!DOCTYPE html>
