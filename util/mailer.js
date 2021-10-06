@@ -14,7 +14,10 @@ module.exports.sendOtpMail = async (otp, email) => {
     //   user: testAccount.user, // generated ethereal user
     //   pass: testAccount.pass, // generated ethereal password
     // },
-    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    ignoreTLS: false,
+    secure: false,
     auth: {
       user: "qurate6@gmail.com",
       pass: "ufbxpnrhbzueyigq",
