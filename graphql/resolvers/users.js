@@ -404,10 +404,11 @@ module.exports = {
     },
     async createGroupPost(_, { uid, groupId, body }) {
       const user = await User.findById(uid);
-      const { title, description, domain, img } = await generateLinkPreview(
-        body
-      );
+      // const { title, description, domain, img } = await generateLinkPreview(
+      //   body
+      // );
       //desctructuring the previewData
+      const { title, description, domain, img } = await previewGenerator(body);
 
       //create a newPost from GroupPosts
       const newPost = new GroupPosts({
